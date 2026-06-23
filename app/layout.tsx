@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { clashDisplay, geistSans, jetbrainsMono } from "./fonts";
-import { AmbientBackground } from "@/components/ambient-background";
-import { SmoothScroll } from "@/components/smooth-scroll";
+import { ClientWrappers } from "./client-wrappers";
 import "./globals.css";
 
 const SITE_TITLE = "Decrypt │ AI Software Studio for Custom Apps, Automation & Business Systems";
@@ -56,8 +55,7 @@ export default function RootLayout({
       className={`dark ${geistSans.variable} ${jetbrainsMono.variable} ${clashDisplay.variable}`}
     >
       <body>
-        <SmoothScroll />
-        <AmbientBackground />
+        <ClientWrappers />
         {children}
       </body>
     </html>
